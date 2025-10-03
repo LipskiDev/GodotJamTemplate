@@ -25,10 +25,12 @@ jobs:
           mkdir -v -p ~/.local/share/godot/export_templates
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
       - name: Create staging directory
-        run: mkdir -v -p build/web
+        run: mkdir -v -p godot-jam-template/build/web
+
+        
 
       - name: Build
-        run: godot -v --headless --path godot-jam-template --export-release "Web" build/web/index.html
+        run: godot -v --headless --path godot-jam-template --export-release "Web" godot-jam-template/build/web/index.html
 
       - name: Add coi-service-worker
         run: |
