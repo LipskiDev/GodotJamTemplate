@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: |
           export_dir="$GITHUB_WORKSPACE/build/web"
-          godot -v --headless --path godot-jam-template --export-release "Web" "$export_dir/index.html"
+          godot -v --headless --path project --export-release "Web" "$export_dir/index.html"
 
 
       - name: Add coi-service-worker
