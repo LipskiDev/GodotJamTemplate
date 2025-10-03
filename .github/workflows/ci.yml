@@ -28,7 +28,7 @@ jobs:
         run: mkdir -v -p build/web
 
       - name: Build
-        run: godot -v --export-release --headless "Web"
+        run: godot -v --headless --path godot-jam-template --export-release "Web" build/web/index.html
 
       - name: Add coi-service-worker
         run: |
